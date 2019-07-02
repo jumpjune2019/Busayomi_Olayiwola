@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+     <title>First Assignment</title>
+  </head>
+  <body>
+     <h1>First Assignment</h1>
+
+<p id="demo"></p>
+
+<script>
+ var person = prompt("Please enter your name");
+
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! Please enter the following information below.";
+  }
+</script>
+<form>
+Date of Birth: <input type="date" id = "dob" name="Dateofbirth"><br>
+First name: <input type="FirstName" id = "fname" name="FirstName"><br>
+Last name: <input type="Lastname" id = "lname" name="Lastname"><br>
+City: <input type="City" id = "city" name="City"><br>
+State: <input type="State" id = "State" name="State"><br>
+Zip Code: <input type= "number" maxlength = "5"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  id = "zip" name="ZipCode"><br>
+<button onclick="myFunction()">Submit</button> <input type="reset" value="Reset">
+<button onclick="myFunction()">ResetPage</button>
+</form>
+
+
+<script>
+
+function myFunction() {
+
+var x = document.getElementById("fname").value;
+var y = document.getElementById("lname").value;
+var z = document.getElementById("dob").value;
+var a = document.getElementById("zip").value;
+alert(document.getElementById("demo").innerHTML =
+	"You entered the following information:"
+	+ "\n FirstName: " + x
+	+ "\n LastName: " + y
+    + "\n DOB: " + z
+    + "\n Zip: " + a);
+}
+
+</script>
+  </body>
+
+</html>
